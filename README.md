@@ -44,3 +44,194 @@ Además de de lo mencionado anteriormente el alumno ha de incluir la siguiente f
 - Relaciones necesarias
 - CRUD de los diferentes modelos.
 - Excelente Readme (IMPORTANTE). 
+
+
+# Clientes
+
+### Listar todos los clientes
+
+**GET** ``` localhost:8181/api/clientes ```
+
+### Añadir clientes
+
+**POST** ```localhost:8181/api/clientes```
+
+```
+{
+    "dni": "12345678A",
+    "nombre": "Nombre Cliente",
+    "apellido": "Apellido Cliente"
+}
+```
+
+### Listar clientes por id
+
+**GET** ```localhost:8181/api/clientes/{id}```
+
+```
+localhost:8181/api/clientes/1
+```
+
+### Actualizar clientes
+
+**PUT** ```localhost:8181/api/clientes/{id}```
+
+```
+localhost:8181/api/clientes/1
+```
+
+```
+{
+    "dni": "12345678A",
+    "nombre": "Nombre Cliente",
+    "apellido": "Apellido Cliente"
+}
+```
+
+### Eliminar clientes
+
+**DELETE** ```localhost:8181/api/clientes/{id}```
+
+```
+localhost:8181/api/clientes/1
+```
+
+### Listar todos los citas como cliente (propias)
+
+**GET** ``` localhost:8181/api/citas/cliente/{id} ```
+
+```
+localhost:8181/api/citas/cliente/1
+```
+
+# Dentistas
+
+### Listar todos los dentistas
+
+**GET** ``` localhost:8181/api/dentistas ```
+
+### Añadir dentistas
+
+**POST** ```localhost:8181/api/dentistas```
+
+```
+{
+    "dni": "12345678A",
+    "nombre": "Nombre Dentista",
+    "apellido": "Apellido Dentista"
+}
+```
+
+### Listar dentistas por id
+
+**GET** ```localhost:8181/api/dentistas/{id}```
+
+```
+localhost:8181/api/dentistas/1
+```
+
+### Actualizar dentistas
+
+**PUT** ```localhost:8181/api/dentistas/{id}```
+
+```
+localhost:8181/api/dentistas/1
+```
+
+```
+{
+    "dni": "12345678A",
+    "nombre": "Nombre Dentista",
+    "apellido": "Apellido Dentista"
+}
+```
+
+### Eliminar dentistas
+
+**DELETE** ```localhost:8181/api/dentistas/{id}```
+
+```
+localhost:8181/api/dentistas/1
+```
+
+### Listar todos los citas (como dentista)
+
+**GET** ``` localhost:8181/api/dentistas/citas ```
+
+### Listar todos los clientes (como dentista)
+
+**GET** ``` localhost:8181/api/dentistas/clientes ```
+
+
+# Citas
+
+### Listar todos los citas
+
+**GET** ``` localhost:8181/api/citas ```
+
+### Añadir citas
+
+**POST** ```localhost:8181/api/citas```
+
+```
+{
+
+"id": 1,
+  "cliente": {
+    "dni": "12345678A",
+    "nombre": "Nombre Cliente",
+    "apellido": "Apellido Cliente"
+  },
+  "dentista": {
+    "dni": "12345678A",
+    "nombre": "Nombre Dentista",
+    "apellido": "Apellido Dentista"
+  },
+  "fecha_hora": "2023-01-01T18:00:00"
+  
+}
+```
+
+### Listar citas por id
+
+**GET** ```localhost:8181/api/citas/{id}```
+
+```
+localhost:8181/api/clientes/1
+```
+
+### Actualizar citas
+
+**PUT** ```localhost:8181/api/citas/{id}```
+
+```
+localhost:8181/api/citas/1
+```
+
+```
+{
+
+"id": 1,
+  "cliente": {
+    "dni": "12345678A",
+    "nombre": "Nombre Cliente",
+    "apellido": "Apellido Cliente"
+  },
+  "dentista": {
+    "dni": "12345678A",
+    "nombre": "Nombre Dentista",
+    "apellido": "Apellido Dentista"
+  },
+  "fecha_hora": "2023-01-01T18:00:00"
+  
+}
+```
+
+### Eliminar citas
+
+**DELETE** ```localhost:8181/api/citas/{id}```
+
+```
+localhost:8181/api/citas/1
+```
+
